@@ -101,4 +101,4 @@ Vault dynamic secrets for AWS roles
 
 ### 📜 License
 
-MIT License
+GNU GENERAL PUBLIC LICENSE v3
