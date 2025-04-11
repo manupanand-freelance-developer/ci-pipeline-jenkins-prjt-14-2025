@@ -40,7 +40,7 @@ This project automates the provisioning and configuration of a production-ready 
 ## 📁 Project Structure
 
 ```
-jenkins-ci-project/
+ci-pipeline-jenkins-prjt-14-2025/
 ├── ansible/
 │   ├── playbook.yml
 │   └── roles/
@@ -68,7 +68,7 @@ jenkins-ci-project/
    - Install Jenkins and Docker
    - Add Jenkins to Docker group
    - Configure and start Jenkins service
-5. Jenkins is now accessible via the public IP with Docker build support.
+5. Jenkins is now accessible via the public IP or dns with Docker build support.
 
 ---
 
