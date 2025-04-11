@@ -1,1 +1,4 @@
 name: Create Jenkins Infra - CI pipeline
+
+
+# send vpc,subnetid,awsuse,password from vault
