@@ -9,7 +9,7 @@ This project automates the provisioning and configuration of a production-ready 
 - **Terraform** – Infrastructure provisioning (AWS EC2, VPC, Security Groups)
 - **Ansible** – Configuration management (Jenkins + Docker setup)
 - **GitHub Actions** – CI for provisioning pipeline
-- **HashiCorp Vault** – Secure storage for secrets (e.g., SSH keys, API tokens)
+- **HashiCorp Vault** – Secure storage for secrets (e.g., username, password, vpc id, etc .)
 - **Jenkins** – CI server for building Docker containers
 
 ---
@@ -34,7 +34,7 @@ This project automates the provisioning and configuration of a production-ready 
 [ Terraform ] ───► [ AWS EC2 Instance ]
                         ├─ Jenkins (Controller + Agent)
                         └─ Docker
-[ Vault ] ─────── secrets (SSH keys, tokens, etc)
+[ Vault ] ─────── secrets (username,password,vpc id, etc)
 ```
 
 ## 📁 Project Structure
@@ -51,8 +51,6 @@ ci-pipeline-jenkins-prjt-14-2025/
 │   └── outputs.tf
 ├── .github/workflows/
 │   └── deploy.yml
-├── vault/
-│   └── secrets.hcl
 ├── README.md
 └── LICENSE
 ```
@@ -69,6 +67,7 @@ ci-pipeline-jenkins-prjt-14-2025/
    - Add Jenkins to Docker group
    - Configure and start Jenkins service
 5. Jenkins is now accessible via the public IP or dns with Docker build support.
+6. Configure Jenkins node for use.
 
 ---
 
@@ -76,7 +75,6 @@ ci-pipeline-jenkins-prjt-14-2025/
 
 - All sensitive data (e.g., AWS access keys, username, password, Jenkins secrets) are stored and accessed from **HashiCorp Vault**.
 - Jenkins home is stored on EC2 with a dedicated volume (optional).
-- SSH access is restricted by Security Groups (SSH allowed only from admin IP).
 
 ---
 
@@ -87,8 +85,6 @@ ci-pipeline-jenkins-prjt-14-2025/
 - Vault Server (local or HCP)
 - Terraform v1.4+
 - Ansible v2.12+
-- Docker (for local testing, optional)
-
 ---
 
 
