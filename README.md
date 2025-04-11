@@ -27,6 +27,7 @@ This project automates the provisioning and configuration of a production-ready 
 ---
 
 ## 🌐 Architecture Overview
+```
 [ GitHub Actions ]
        |
        v
@@ -34,10 +35,11 @@ This project automates the provisioning and configuration of a production-ready 
                         ├─ Jenkins (Controller + Agent)
                         └─ Docker
 [ Vault ] ─────── secrets (SSH keys, tokens, etc)
+```
 
 ## 📁 Project Structure
 
-
+```
 jenkins-ci-project/
 ├── ansible/
 │   ├── playbook.yml
@@ -53,7 +55,7 @@ jenkins-ci-project/
 │   └── secrets.hcl
 ├── README.md
 └── LICENSE
-
+```
 
 ---
 
