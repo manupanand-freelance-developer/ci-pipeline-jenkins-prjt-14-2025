@@ -22,3 +22,9 @@ variable "subnet_id" {
 variable "iam_policy" {
   
 }
+variable "dns_name" {
+  
+}
+variable "dns_zone_id" {
+  
+}
